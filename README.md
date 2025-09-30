@@ -1,5 +1,5 @@
 # Dynamic Pokemon Expansion (added Gen 9)
-#### This branch is 99% complete , just poltchageist and Sinistcha are missing form sprites so for convience we've added their sprites as their form sprites. Soon that will be complete as well.
+#### This is my fork of DPE. I mainly use this for editing Pokemon's base stats and TM compatibility. This branch is 99% complete , just poltchageist and Sinistcha are missing form sprites so for convience we've added their sprites as their form sprites. Soon that will be complete as well.
 ## Main Contributors
 Zake , Axel Loquendo and The-Code-Mining-Hub (TCMH) people. (discord link - https://discord.com/invite/CDted4ytpn ) 
 #### 'We love your support. - TCMH'

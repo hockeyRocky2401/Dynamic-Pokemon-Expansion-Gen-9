@@ -1,6 +1,17 @@
 #include "defines.h"
 #include "../include/moves.h"
 
+// --- Local override so this TU uses CFRU's Trailblaze ID ---
+#ifndef CFRU_TRAILBLAZE_ID
+  #define CFRU_TRAILBLAZE_ID 0x3C9  // <-- put CFRU's MOVE_TRAILBLAZE hex here
+#endif
+
+#undef  MOVE_TRAILBLAZE
+#define MOVE_TRAILBLAZE CFRU_TRAILBLAZE_ID
+
+// Optional safety (fails fast if your global tables aren't big enough)
+_Static_assert(MOVES_COUNT > CFRU_TRAILBLAZE_ID, "Trailblaze ID out of range for current build");
+
 const u16 gTMHMMoves[NUM_TMSHMS] =
 {
 	MOVE_FOCUSPUNCH,	//1
@@ -9,7 +20,7 @@ const u16 gTMHMMoves[NUM_TMSHMS] =
 	MOVE_CALMMIND,		//4
 	MOVE_ROAR,			//5
 	MOVE_TOXIC,			//6
-	MOVE_LOWKICK,			//7
+	MOVE_LOWKICK,		//7
 	MOVE_BULKUP,		//8
 	MOVE_BULLETSEED,	//9
 	MOVE_HIDDENPOWER,	//10
@@ -116,7 +127,7 @@ const u16 gTMHMMoves[NUM_TMSHMS] =
 	MOVE_SMACKDOWN,		//111
 	MOVE_ROUND,			//112
 	MOVE_ECHOEDVOICE,	//113
-	MOVE_NATURALGIFT,	//114
+	MOVE_TRAILBLAZE,	//114 Was Natural Gift want Trailblaze
 	MOVE_QUASH,			//115
 	MOVE_TRICKROOM,		//116
 	MOVE_FLING,			//117
@@ -284,7 +295,7 @@ const u16 gMoveTutorMoves[NUM_MOVE_TUTOR_MOVES] =
 	MOVE_CONFUSERAY,		//146
 	MOVE_CHILLINGWATER,		//147
 	MOVE_POUNCE,			//148
-	MOVE_TRAILBLAZE,		//149
+	MOVE_NATURALGIFT,		//149 Trailblaze
 	MOVE_ICESPINNER,		//150
 	MOVE_TERABLAST,			//151
 };
